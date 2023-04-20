@@ -38,7 +38,7 @@ class EdzesController extends Controller
         return view('show',  ['edzes' => $edzes]);
     }
 
-    public function edit(edzes $edzes)
+    public function edit($id)
     {
         $edzes = edzes::find($id);
         return view('editedzes', ['edzes' => $edzes]);
@@ -50,7 +50,7 @@ class EdzesController extends Controller
             "date"=>$request->date,
             "description"=>$request->description,
             "duration"=>$request->duration,
-            "completed"=>$request->completed
+            "completed"=>$request->completed ? 1:0
         ];
 
         edzes::where('id', $id)->update($data);

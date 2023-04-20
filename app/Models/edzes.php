@@ -16,4 +16,7 @@ class edzes extends Model
         "duration",
         "completed"
     ];
+
+    const UPDATED_AT = null;
+    const CREATED_AT = null;
 }

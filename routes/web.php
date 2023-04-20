@@ -15,9 +15,9 @@ use App\Http\Controllers\EdzesController;
 */
 
 Route::get('/',  [EdzesController::class, 'index']);
-// Route::get('/newproduct',  [ProductsController::class, 'create']);
-// Route::post('/newproduct',  [ProductsController::class, 'store']);
-// Route::get('/editproduct/{id}',  [ProductsController::class, 'edit']);
-// Route::patch('/editproduct/{id}',  [ProductsController::class, 'update']);
-// Route::get('/deleteproduct/{id}',  [ProductsController::class, 'show']);
-// Route::delete('/deleteproduct/{id}',  [ProductsController::class, 'destroy']);
+Route::get('/newedzes',  [EdzesController::class, 'create']);
+Route::post('/newedzes',  [EdzesController::class, 'store']);
+Route::get('/editedzes/{id}',  [EdzesController::class, 'edit']);
+Route::patch('/editedzes/{id}',  [EdzesController::class, 'update']);
+Route::get('/deleteedzes/{id}',  [EdzesController::class, 'show']);
+Route::delete('/deleteedzes/{id}',  [EdzesController::class, 'destroy']);
